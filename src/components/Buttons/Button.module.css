@@ -1,0 +1,42 @@
+.button {
+  padding: 25px 60px ;
+
+  border-radius: 10px;
+
+  color: #BD00FF;
+  font-weight: bold;
+
+  font-size: 24px;
+
+  text-decoration: none;
+  background-color: #000;
+
+  position: relative;
+
+  transition: all .5s;
+
+  cursor: pointer;
+}
+
+.button::after{
+  content: '';
+  background-color: transparent;
+
+  width: 103%;
+  height: 105%;
+
+  position: absolute;
+  top: -4px;
+  left: -3%;
+
+  border: 3px solid #000;
+  border-radius: 10px;
+
+}
+
+.button:hover {
+  background-color: #BD00FF;
+  color: #000;
+
+}
+
