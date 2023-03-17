@@ -5,11 +5,14 @@ import chat from '../../assets/img/Chat.png';
 import control from '../../assets/img/Game.png';
 import riot from '../../assets/img/Riot.png';
 import styles from './SideNav.module.css';
+import { Link } from 'react-router-dom';
 export const SideNav = () => {
   return (
     <nav className={styles.navigation}>
       <div className={styles.logo}>
-        <img src={LOL} alt="Logo LOL" />
+        <Link to="/">
+          <img src={LOL} alt="Logo LOL" />
+        </Link>
       </div>
       <div className={styles.listItems}>
         <ul>

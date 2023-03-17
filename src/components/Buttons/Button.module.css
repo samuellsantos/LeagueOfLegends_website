@@ -37,6 +37,11 @@
 .button:hover {
   background-color: #BD00FF;
   color: #000;
+}
 
+@media (max-width: 440px) {
+  .button {
+    padding: 15px 30px ;
+  }
 }
 

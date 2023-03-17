@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../Buttons/Button';
 import styles from './Home.module.css';
 
@@ -27,7 +28,9 @@ export const Home = () => {
           <Button link="https://www.leagueoflegends.com/pt-br/" target="_blank">
             Play Now
           </Button>
-          <Button>Champions</Button>
+          <Link to="champions">
+            <Button>Champions</Button>
+          </Link>
         </section>
       </div>
     </div>
