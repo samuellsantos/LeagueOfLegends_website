@@ -4,3 +4,15 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
+.animate {
+  transform: translateY(-40px);
+  opacity: 0;
+  animation: animate 1.5s forwards;
+}
+@keyframes animate {
+  to{
+    transform: initial;
+    opacity: 1;
+  }
+}

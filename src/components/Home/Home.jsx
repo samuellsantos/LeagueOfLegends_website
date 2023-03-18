@@ -6,7 +6,7 @@ import styles from './Home.module.css';
 export const Home = () => {
   return (
     <div className={styles.background}>
-      <div className={styles.information}>
+      <div className={`${styles.information} animate`}>
         <section className={styles.section}>
           <h1 className={styles.lol}>
             league <br /> legends

@@ -14,7 +14,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  overflow-y: scroll;
 }
 
 .background .information {
@@ -90,6 +89,7 @@
   }
   .background {
     padding: 5px;
+    overflow-y: scroll;
   }
   .background .information .lol {
     font-size: 60px;  
