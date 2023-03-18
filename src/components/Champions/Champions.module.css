@@ -71,4 +71,11 @@
 
   overflow-y: scroll;
 }
+.champions .championImg {
+  cursor: pointer;
+  transition: .3s;
+}
+.champions .championImg:hover {
+  transform: scale(110%);
+}
 

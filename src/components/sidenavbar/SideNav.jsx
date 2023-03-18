@@ -9,11 +9,9 @@ import { Link } from 'react-router-dom';
 export const SideNav = () => {
   return (
     <nav className={styles.navigation}>
-      <div className={styles.logo}>
-        <Link to="/">
-          <img src={LOL} alt="Logo LOL" />
-        </Link>
-      </div>
+      <Link to="/" className={styles.logo}>
+        <img src={LOL} alt="Logo LOL" />
+      </Link>
       <div className={styles.listItems}>
         <ul>
           <li>

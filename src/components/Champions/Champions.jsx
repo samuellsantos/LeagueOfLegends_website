@@ -2,20 +2,16 @@ import React from 'react';
 import styles from './Champions.module.css';
 import video from '../../assets/video/background2.mp4';
 export const Champions = () => {
-  const [heroe, setHeroe] = React.useState(null);
+  const [champions, setChampions] = React.useState([]);
 
   React.useEffect(() => {
     fetch(
-      'http://ddragon.leagueoflegends.com/cdn/12.20.1/data/en_US/champion.json',
+      'http://ddragon.leagueoflegends.com/cdn/12.20.1/data/pt_BR/champion.json',
     )
       .then((response) => response.json())
-      .then((json) => {
-        console.log(json.data);
-        setHeroe(json.data);
-      });
-  }, []);
+      .then((data) => setChampions(Object.values(data.data)));
+  });
 
-  if (heroe === null) return null;
   return (
     <div className={styles.background}>
       <video autoPlay loop className={styles.backgroundVideo}>
@@ -27,8 +23,13 @@ export const Champions = () => {
         </section>
 
         <section className={styles.champions}>
-          {Object.keys(heroe).map((heroi) => (
-            <h1 key={heroi}>{heroi}</h1>
+          {champions.map((champion) => (
+            <img
+              className={styles.championImg}
+              key={champion.id}
+              src={`https:///ddragon.leagueoflegends.com/cdn/12.20.1/img/champion/${champion.image.full}`}
+              alt={champion.name}
+            />
           ))}
         </section>
       </div>
