@@ -89,11 +89,13 @@
   }
   .background {
     padding: 5px;
+    align-items: center;
     overflow-y: scroll;
   }
   .background .information .lol {
     font-size: 60px;  
     line-height: 1;
+    margin: 50px 0;
   }
   .of {
     left: 83%;

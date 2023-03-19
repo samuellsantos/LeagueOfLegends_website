@@ -45,3 +45,9 @@ img {
     flex-direction: row;
   }
 }
+
+@media (max-width: 360px) {
+  .listItems ul li img{
+    width: 25px;
+  }
+}
