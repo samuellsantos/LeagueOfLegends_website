@@ -1,0 +1,63 @@
+@font-face {
+  font-family:  Friz;
+  src: url('../../assets/fonts/Friz.ttf') ;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+.name {
+  background-image: linear-gradient(to bottom, #C39156, #F5DA81, #C59E51);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+
+  font-family: Friz, sans-serif; 
+  color: transparent;
+  font-size: 10rem;
+}
+
+.title {
+  background-image: linear-gradient(to bottom, #BFC0C2, #C8C9CB, #F8F8F8, #B9BABE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: capitalize;
+
+  font-family: Friz, sans-serif; 
+  color: transparent;
+  font-size: 2rem;
+}
+
+.about {
+  max-width: 900px;
+  color: #fff;
+ 
+
+  font-family:  sans-serif; 
+  line-height: 2;
+  font-size: 1.2rem;
+}
+.containerAbout {
+  background-color: #000;
+  border-radius: 5px;
+  padding: 20px;
+} 
+
+.button {
+  padding: 15px 30px;
+  background-color: #000;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  margin: 15px;
+  cursor: pointer;
+  transition: .5s;
+}
+.button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+

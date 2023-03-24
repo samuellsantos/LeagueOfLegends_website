@@ -1,7 +1,6 @@
 @font-face {
   font-family:  Friz;
   src: url('../../assets/fonts/Friz.ttf') ;
-
 }
 .background {
   width: 100%;
@@ -28,6 +27,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  overflow-Y: auto;
 }
 .title {
   background-image: linear-gradient(to bottom, #C39156, #F5DA81, #C59E51);
@@ -86,8 +87,6 @@
 
   height: 85vh;
   width: 100%;
-
-  overflow-y: scroll;
   
 }
 .champions::-webkit-scrollbar { 

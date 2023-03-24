@@ -26,10 +26,10 @@ export const Home = () => {
         </section>
         <section className={styles.buttonsSection}>
           <Button link="https://www.leagueoflegends.com/pt-br/" target="_blank">
-            Play Now
+            Jogue Agora
           </Button>
           <Link to="champions">
-            <Button>Champions</Button>
+            <Button>Campeões</Button>
           </Link>
         </section>
       </div>

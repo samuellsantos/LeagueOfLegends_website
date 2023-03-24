@@ -2,24 +2,8 @@ import React from 'react';
 import styles from './Champions.module.css';
 import video from '../../assets/video/background2.mp4'; // Video usadado para colocar como background
 import loadingGif from '../../assets/gif/loading.gif';
+import { Link, Route, Routes } from 'react-router-dom';
 
-const personagensInativos = [
-  'Aurelion Sol',
-  'Bardo',
-  `Bel'Veth`,
-  `Cho'Gath`,
-  `Dr. Mundo`,
-  `jarvan IV`,
-  `Kai'Sa`,
-  `Kha'Zix`,
-  `Kog'Maw`,
-  `LeBlanc`,
-  `Lee Sin`,
-  `Master Yi`,
-  `Miss Fortune`,
-  `Wukong`,
-  `Nunu e Willump`,
-];
 export const Champions = () => {
   const [champions, setChampions] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
@@ -28,17 +12,12 @@ export const Champions = () => {
     //Fazendo fetch dos personagens....
     setLoading(true);
     fetch(
-      'http://ddragon.leagueoflegends.com/cdn/12.20.1/data/pt_BR/champion.json',
+      'http://ddragon.leagueoflegends.com/cdn/12.20.1/data/en_US/champion.json',
     )
       .then((response) => response.json())
       .then((data) => {
         setTimeout(() => {
-          const championsArray = Object.values(data.data);
-          const championsNames = championsArray.map((champion) => ({
-            ...champion,
-            name: champion.name.replace(/\s/g, ''),
-          }));
-          setChampions(championsNames);
+          setChampions(Object.values(data.data));
           setLoading(false);
         }, 4000); // O setTimeout foi usado somente para fazer com que gere uma impressão de carreagamento(para eu treinar o estado de loading), já que a API trás os dados rapidamente.
       });
@@ -51,7 +30,7 @@ export const Champions = () => {
       </div>
     );
 
-  if (loading === false)
+  if (!loading)
     return (
       <div className={styles.background}>
         <video autoPlay loop className={styles.backgroundVideo}>
@@ -59,20 +38,25 @@ export const Champions = () => {
         </video>
         <div className={styles.container}>
           <section>
-            <h1 className={styles.title}>Champions</h1>
+            <h1 className={styles.title}>Campeões</h1>
           </section>
 
           <section className={`${styles.champions} animate`}>
             {champions.map((champion) => (
-              <div key={champion.id} className={styles.cardChampion}>
-                <img
-                  className={styles.championImg}
-                  src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.name}_0.jpg`}
-                  alt={champion.name}
-                />
-                <p className={styles.ChampionName}>{champion.name}</p>
-              </div>
+              <Link key={champion.id} to={champion.id}>
+                <div className={styles.cardChampion}>
+                  <img
+                    className={styles.championImg}
+                    src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
+                    alt={champion.name}
+                  />
+                  <p className={styles.ChampionName}>{champion.id}</p>
+                </div>
+              </Link>
             ))}
+            <Routes>
+              <Route path="details" />
+            </Routes>
           </section>
         </div>
       </div>
