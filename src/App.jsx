@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SideNav } from './components/sidenavbar/SideNav';
 import { Home } from './components/Home/Home';
 import { Champions } from './components/Champions/Champions';
-import { ChampionDetails } from './ChampionDetails/ChampionDetails';
+import { ChampionDetails } from './Components/ChampionDetails/ChampionDetails';
 
 export function App() {
   return (

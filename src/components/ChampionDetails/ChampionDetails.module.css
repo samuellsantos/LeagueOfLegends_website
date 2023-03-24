@@ -4,7 +4,9 @@
 }
 .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  padding: 0 20px;
 }
 .name {
   background-image: linear-gradient(to bottom, #C39156, #F5DA81, #C59E51);
@@ -60,4 +62,27 @@
   color: #000;
   border: 2px solid #000;
 }
+.back {
+  position: absolute;
+  left: 5%;
+  top: 15%;
+}
+
+@media (max-width: 720px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .name {
+    font-size: 6rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .about {
+    font-size: 1rem;
+  }
+}
+
 

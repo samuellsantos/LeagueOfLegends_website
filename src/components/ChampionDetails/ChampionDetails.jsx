@@ -1,6 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import styles from './ChampionDetails.module.css';
+import back from '../../assets/img/up-chevron-svgrepo-com.svg';
+
 export const ChampionDetails = () => {
   const { championId } = useParams();
   const [champions, setChampions] = React.useState([]);
@@ -30,8 +32,12 @@ export const ChampionDetails = () => {
             paddingLeft: '100px',
           }}
         >
+          <Link to="/champions">
+            <img src={back} alt="back" className={styles.back} />
+          </Link>
+
           {champions.map((champion) => (
-            <div key={champion.id}>
+            <div key={champion.id} className={styles.championDetail}>
               <h1 className={`animate ${styles.name}`}>{champion.name}</h1>
               <h2 className={`animate ${styles.title}`}>{champion.title}</h2>
               {about === false ? (

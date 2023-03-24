@@ -50,7 +50,7 @@ export const Champions = () => {
                     src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
                     alt={champion.name}
                   />
-                  <p className={styles.ChampionName}>{champion.id}</p>
+                  <p className={styles.ChampionName}>{champion.name}</p>
                 </div>
               </Link>
             ))}
