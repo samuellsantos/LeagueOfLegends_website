@@ -10,7 +10,7 @@ export const ChampionDetails = () => {
 
   React.useEffect(() => {
     fetch(
-      `http://ddragon.leagueoflegends.com/cdn/12.20.1/data/pt_BR/champion/${championId}.json`,
+      `https://ddragon.leagueoflegends.com/cdn/12.20.1/data/pt_BR/champion/${championId}.json`,
     )
       .then((response) => response.json())
       .then((data) => {
