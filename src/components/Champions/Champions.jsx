@@ -11,7 +11,7 @@ export const Champions = () => {
     //Fazendo fetch dos personagens....
     setLoading(true);
     fetch(
-      'http://ddragon.leagueoflegends.com/cdn/12.20.1/data/en_US/champion.json',
+      'https://ddragon.leagueoflegends.com/cdn/12.20.1/data/en_US/champion.json',
     )
       .then((response) => response.json())
       .then((data) => {

@@ -25,7 +25,7 @@ export const ChampionDetails = () => {
         <div
           className={styles.container}
           style={{
-            backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championId}_0.jpg)`,
+            backgroundImage: `url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championId}_0.jpg)`,
             backgroundSize: 'cover',
             width: '100%',
             height: '100vh',
