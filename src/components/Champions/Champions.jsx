@@ -33,9 +33,7 @@ export const Champions = () => {
   if (!loading)
     return (
       <div className={styles.background}>
-        <video autoPlay loop className={styles.backgroundVideo}>
-          <source src={video} type="video/mp4" />
-        </video>
+        <div className={styles.backgroundImg}></div>
         <div className={styles.container}>
           <section>
             <h1 className={styles.title}>Campeões</h1>
