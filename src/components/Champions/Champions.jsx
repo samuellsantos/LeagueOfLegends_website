@@ -15,10 +15,8 @@ export const Champions = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        setTimeout(() => {
-          setChampions(Object.values(data.data));
-          setLoading(false);
-        }, 4000); // O setTimeout foi usado somente para fazer com que gere uma impressão de carreagamento(para eu treinar o estado de loading), já que a API trás os dados rapidamente.
+        setChampions(Object.values(data.data));
+        setLoading(false);
       });
   }, []);
 
