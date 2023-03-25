@@ -28,7 +28,7 @@
   align-items: center;
   justify-content: center;
 
-  overflow-Y: auto;
+  overflow-y: auto;
 }
 .title {
   background-image: linear-gradient(to bottom, #C39156, #F5DA81, #C59E51);
