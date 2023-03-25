@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Champions.module.css';
-import video from '../../assets/video/background2.mp4'; // Video usadado para colocar como background
 import loadingGif from '../../assets/gif/loading.gif';
 import { Link, Route, Routes } from 'react-router-dom';
 
