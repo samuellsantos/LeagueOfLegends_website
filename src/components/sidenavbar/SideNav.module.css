@@ -23,6 +23,19 @@ img {
   flex-direction: column;
   gap: 30px;
 }
+.circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  justify-content: center;
+}
+.circle:hover {
+  background-image: linear-gradient(to bottom, #C39156, #F5DA81, #C59E51);
+}
 .listItems ul li {
   cursor: pointer;
 }

@@ -41,6 +41,8 @@
   color: transparent;
   font-size: 3rem;
 
+  /* margin-top: 48px; */
+
   position: absolute;
   left: 42%;
   top: 2%;
@@ -50,7 +52,7 @@
 
   display: block;
 
-  width: 46%;
+  width: 40%;
   height: 6px;
 
   background: linear-gradient(to bottom, #C39156, #F5DA81, #C59E51);

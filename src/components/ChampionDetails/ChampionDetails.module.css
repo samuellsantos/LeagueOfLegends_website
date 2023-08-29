@@ -7,6 +7,7 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 0 20px;
+  overflow-y: scroll;
 }
 .name {
   background-image: linear-gradient(to bottom, #C39156, #F5DA81, #C59E51);
@@ -32,7 +33,7 @@
 
 .about {
   max-width: 900px;
-  color: #fff;
+  color: #000;
  
 
   font-family:  sans-serif; 
@@ -40,9 +41,10 @@
   font-size: 1.2rem;
 }
 .containerAbout {
-  background-color: #000;
+  background-image: linear-gradient(to bottom, #C39156, #F5DA81, #C59E51);
   border-radius: 5px;
   padding: 20px;
+  height: auto;
 } 
 
 .button {
@@ -58,7 +60,7 @@
   transition: .5s;
 }
 .button:hover {
-  background-color: #fff;
+  background-image: linear-gradient(to bottom, #C39156, #F5DA81, #C59E51);
   color: #000;
   border: 2px solid #000;
 }
@@ -71,17 +73,47 @@
 @media (max-width: 720px) {
   .container {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
   .name {
     font-size: 6rem;
+    position: absolute;
+    top: 30%;
+    left: 20px;
   }
   .title {
     font-size: 1.5rem;
+    position: absolute;
+    top: 45%;
+    left: 20px;
+  }
+  .button {
+    position: absolute;
+    top: 54%;
+    left: 0;
   }
   .about {
     font-size: 1rem;
+    width: 100%;
+  }
+  .containerAbout {
+    max-width: 100%;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 520px) {
+  .title {
+    margin: 40px 0;
+    top: 38%;
+
+  }
+  .name {
+    font-size: 3rem;
+  }
+  .button {
+    top: 48%;
   }
 }
 

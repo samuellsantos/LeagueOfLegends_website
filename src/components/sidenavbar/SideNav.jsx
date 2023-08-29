@@ -14,13 +14,13 @@ export const SideNav = () => {
       </Link>
       <div className={styles.listItems}>
         <ul>
-          <li>
+          <li className={styles.circle}>
             <img src={diamond} alt="diamond" />
           </li>
-          <li>
+          <li className={styles.circle}>
             <img src={chat} alt="chat" />
           </li>
-          <li>
+          <li className={styles.circle}>
             <img src={control} alt="control" />
           </li>
         </ul>

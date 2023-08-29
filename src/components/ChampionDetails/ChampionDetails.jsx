@@ -38,8 +38,14 @@ export const ChampionDetails = () => {
 
           {champions.map((champion) => (
             <div key={champion.id} className={styles.championDetail}>
-              <h1 className={`animate ${styles.name}`}>{champion.name}</h1>
-              <h2 className={`animate ${styles.title}`}>{champion.title}</h2>
+              {!about && (
+                <div>
+                  <h1 className={`animate ${styles.name}`}>{champion.name}</h1>
+                  <h2 className={`animate ${styles.title}`}>
+                    {champion.title}
+                  </h2>
+                </div>
+              )}
               {about === false ? (
                 <button
                   onClick={() => setAbout(!about)}
